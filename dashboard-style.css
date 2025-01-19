@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%; /* Ensuring container occupies 90% of screen width */
+    max-width: 1200px; /* Adding max-width for larger screens */
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+    align-items: center; /* Align content vertically */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.days-table {
+    width: 100%;
+    max-width: 800px; /* Limit max width to ensure responsiveness */
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.days-table th, .days-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.days-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.days-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.days-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Charts Section */
+.charts-container {
+    
+    margin-top: 30px;
+}
+
+
+
+
+canvas {
+    max-width: 60em; /* Make canvas scale with screen width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #ddd; /* Optional: Add border around charts */
+    background-color: white; /* Optional: Add a background color */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .days-table {
+        width: 100%; /* Make table take full width on smaller screens */
+    }
+
+    canvas {
+        max-width: 100%; /* Ensure charts scale properly on smaller devices */
+    }
+}
